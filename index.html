@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paris Baguette</title>
+
+    <!-- js -->
+    <script src="./js/js.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&family=Kanit:wght@500;600;700&family=Lato:wght@300;400;700;900&family=Noto+Sans:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--스크롤 메뉴-->
+    <aside>
+      <ul class="side-menu">
+        <li>
+          <a href="#">
+            <i class="top"></i>
+            <span class="label">TOP</span>
+          </a>
+        </li>
+        <li class="bottom-line"></li>
+        <li>
+          <a href="#">
+            <i class="store"></i>
+            <span class="label">매장정보</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="order"></i>
+            <span class="label">주문정보</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bell"></i>
+            <span class="label">프로모션</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="franchise"></i>
+            <span class="label">창업안내</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="app"></i>
+            <span class="label">파바앱</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!--검색 박스-->
+    <div class="search-box">
+      <form action="#">
+        <input type="text" placeholder="Search" />
+        <div class="search-close-btn"></div>
+      </form>
+    </div>
+
+    <!--메뉴 박스-->
+    <div class="menu-box">
+      <div class="menu-box-content">
+        <div class="close-btn-box">
+          <div class="menu-close-btn"></div>
+        </div>
+        <ul class="yes-line">
+          <li>
+            <a href="#"><span>파바의 약속</span></a>
+          </li>
+          <li>
+            <a href="#"><span>파바 매거진</span></a>
+          </li>
+          <li>
+            <a href="#"><span>파바 스토리</span></a>
+          </li>
+          <li class="more-menu">
+            <a href="#" class="font-blue">
+              <span>상품 안내</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <!--서브메뉴-->
+            <div class="more-sub">
+              <ul class="no-line">
+                <li>
+                  <a href="#"><span>전체</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>브레드</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>케이크</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>샌드위치/샐러드</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>선물</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>디저트/스낵</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>음료/아이스</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>간편식</span></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="yes-line">
+          <li>
+            <a href="#"><span>매장 정보</span></a>
+          </li>
+          <li>
+            <a href="#"><span>주문 정보</span></a>
+          </li>
+          <li>
+            <a href="#"><span>프로모션</span></a>
+          </li>
+        </ul>
+        <ul class="no-line">
+          <li class="only-effect">
+            <a href="#"><span>Follow us</span></a>
+          </li>
+          <li class="icon-size">
+            <a href="#">
+              <span
+                ><img
+                  src="https://www.paris.co.kr/wp-content/uploads/sns_ico_01.svg"
+                  class="menu-sns-1"
+                  alt=""
+              /></span>
+            </a>
+            <a href="#">
+              <span
+                ><img
+                  src="https://www.paris.co.kr/wp-content/uploads/sns_ico_02.svg"
+                  class="menu-sns-2"
+                  alt=""
+              /></span>
+            </a>
+            <a href="#">
+              <span
+                ><img
+                  src="https://www.paris.co.kr/wp-content/uploads/sns_ico_03.svg"
+                  class="menu-sns-3"
+                  alt=""
+              /></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--1024 visible-->
+    <div class="header-visible">
+      <div>
+        <a href="#" class="menu-icon"><i class="fa-solid fa-bars fa-lg"></i></a>
+      </div>
+
+      <a href="#">
+        <h1>PARIS BARGUETTE</h1>
+      </a>
+
+      <div>
+        <a href="#" class="search-icon"
+          ><i class="fa-solid fa-magnifying-glass fa-lg"></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="header-container">
+      <a href="#">
+        <h1>PARIS BARGUETTE</h1>
+      </a>
+      <nav>
+        <div class="nav-left">
+          <ul>
+            <li class="y-line">
+              <a href="#"><span class="y-font">파바의 약속</span></a>
+            </li>
+            <li>
+              <a href="#"><span>파바 매거진</span></a>
+            </li>
+            <li>
+              <a href="#"><span>파바 스토리</span></a>
+            </li>
+            <li>
+              <a href="#"><span>상품 안내</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <a href="#"><span>매장 정보</span></a>
+            </li>
+            <li>
+              <a href="#"><span>주문 정보</span></a>
+            </li>
+            <li>
+              <a href="#"><span>프로모션</span></a>
+            </li>
+            <li class="no-border">
+              <a href="#" class="search-icon"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!--이미지 배너-->
+    <div class="img-center center-blur">
+      <div class="img-banner">
+        <img
+          src="https://cdn.paris.spl.li/wp-content/uploads/2022/05/%ED%8C%9D%EC%97%85%EB%B0%B0%EB%84%88_485_161.jpg"
+          alt=""
+        />
+      </div>
+      <div class="b-img-box">
+        <img
+          src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EB%A9%94%EC%9D%B8%EB%B2%A0%EB%84%88_1600x2000.jpg"
+          alt=""
+        />
+      </div>
+      <div class="b-img-box">
+        <img
+          src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%88_1600_2000.jpg"
+          alt=""
+        />
+      </div>
+      <div class="b-img-box">
+        <img
+          src="https://cdn.paris.spl.li/wp-content/uploads/2023/02/%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%88_1600_2000.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!--파리바게트 매거진-->
+    <div class="pb-magazine">
+      <div class="pb-magazine-top">
+        <div class="pb-m-top-left">
+          <a href="#">
+            <h2>PB MAGAZINE</h2>
+          </a>
+        </div>
+        <div class="pb-m-top-right">
+          <a href="#"><span>SHOW MORE</span></a>
+        </div>
+      </div>
+
+      <div class="pb-magazine-bottom">
+        <ul>
+          <li class="m-li">
+            <img
+              src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EB%85%BC%EC%82%B0%EB%94%B8%EA%B8%B0-PB%EB%A7%A4%EA%B1%B0%EC%A7%84_%EC%8D%B8%EB%84%A4%EC%9D%BC-600x750-1-600x750.png"
+              alt=""
+            />
+            <div class="m-img-text">
+              <a href="#">
+                <h3>논산 딸기</h3>
+              </a>
+              <a href="#">
+                <p>논산 딸기 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+              </a>
+            </div>
+          </li>
+          <li class="m-li-center">
+            <img
+              src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/%EB%AC%B8%EA%B2%BD%EC%98%A4%EB%AF%B8%EC%9E%90-%EB%A7%A4%EA%B1%B0%EC%A7%84_%EC%8D%B8%EB%84%A4%EC%9D%BC-600x750.png"
+              alt=""
+            />
+            <div class="m-img-text">
+              <a href="#">
+                <h3>문경 오미자</h3>
+              </a>
+              <a href="#">
+                <p>문경 오미자 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+              </a>
+            </div>
+          </li>
+          <li class="m-last-li">
+            <img
+              src="https://cdn.paris.spl.li/wp-content/uploads/0830_%EA%B2%BD%EC%82%B0%EB%8C%80%EC%B6%94-PB%EB%A7%A4%EA%B1%B0%EC%A7%84_%EC%8D%B8%EB%84%A4%EC%9D%BC-600x750.png"
+              alt=""
+            />
+            <div class="m-img-text">
+              <a href="#">
+                <h3>경산 대추</h3>
+              </a>
+              <a href="#">
+                <p>경산 대추 농가와 함께한 모두가 행복한 행복상생 프로젝트</p>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--파리바게트 스토리-->
+    <div class="pb-magazine">
+      <div class="pb-magazine-top">
+        <div class="pb-m-top-left">
+          <a href="#">
+            <h2>PB Story</h2>
+          </a>
+        </div>
+        <div class="pb-m-top-right">
+          <a href="#"><span>SHOW MORE</span></a>
+        </div>
+      </div>
+
+      <div class="pb-story-bottom">
+        <ul>
+          <li>
+            <!--pb story box-->
+            <div class="story-box right-e">
+              <div class="story-img-box">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/PB-VIDEO_%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4_%EA%B4%91%EA%B3%A0-full-600x600.png"
+                  alt=""
+                />
+              </div>
+              <div class="story-text-box">
+                <a href="#">
+                  <div class="text-blue">
+                    <p>BREAD VIDEO , 광고</p>
+                  </div>
+                  <h3 class="post-title">🎅2022 Wishing Christmas full.ver</h3>
+                  <div class="post-title-2">
+                    <p>🎅2022 Wishing Christmas</p>
+                    <p>
+                      full.ver﻿크리스마스에 진심이라면? 완벽한 비주얼로 완성해
+                      보세요!
+                    </p>
+                  </div>
+                </a>
+                <div class="post-date">2022-12-19</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="story-box">
+              <div class="story-img-box">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/PB-VIDEO_%EB%AA%B0%EB%9E%98%EC%98%A8%EC%82%B0%ED%83%80-600x600.png"
+                  alt=""
+                />
+              </div>
+              <div class="story-text-box">
+                <a href="#">
+                  <div class="text-blue">
+                    <p>BREAD VIDEO , 광고</p>
+                  </div>
+                  <h3 class="post-title">🎅2022 Wishing Christmas full.ver</h3>
+                  <div class="post-title-2">
+                    <p>🎅2022 Wishing Christmas</p>
+                    <p>
+                      full.ver﻿크리스마스에 진심이라면? 완벽한 비주얼로 완성해
+                      보세요!
+                    </p>
+                  </div>
+                </a>
+                <div class="post-date">2022-12-19</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <!--pb story box-->
+            <div class="story-box right-e">
+              <div class="story-img-box">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/PB-VIDEO_%EB%B8%94%EB%A0%88%EC%8B%B1%EB%A0%88%EB%93%9C%EB%B2%A0%EB%A6%AC-600x600.png"
+                  alt=""
+                />
+              </div>
+              <div class="story-text-box">
+                <a href="#">
+                  <div class="text-blue">
+                    <p>BREAD VIDEO , 광고</p>
+                  </div>
+                  <h3 class="post-title">
+                    2022 Wishing Christmas 블레싱 레드베리
+                  </h3>
+                  <div class="post-title-2">
+                    <p>
+                      🎅2022 Wishing Christmas축복의 의미를 담은 블레싱 레드베리
+                    </p>
+                  </div>
+                </a>
+                <div class="post-date">2022-12-19</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="story-box">
+              <div class="story-img-box">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/PB-VIDEO_%EB%A3%A8%EB%B9%84%EC%8A%A4%ED%8A%B8%EB%A1%9C%EB%B2%A0%EB%A6%AC%EC%BC%80%EC%9D%B4%ED%81%AC-600x600.png"
+                  alt=""
+                />
+              </div>
+              <div class="story-text-box">
+                <a href="#">
+                  <div class="text-blue">
+                    <p>BREAD VIDEO , 광고</p>
+                  </div>
+                  <h3 class="post-title">
+                    2022 Wishing Christmas 블레싱 레드베리
+                  </h3>
+                  <div class="post-title-2">
+                    <p>
+                      🎅2022 Wishing Christmas축복의 의미를 담은 블레싱 레드베리
+                    </p>
+                  </div>
+                </a>
+                <div class="post-date">2022-12-19</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--파리바게트 홍보-->
+    <div class="pb-magazine">
+      <div class="pb-magazine-top">
+        <div class="pb-m-top-left">
+          <a href="#">
+            <h2>PROMOTION</h2>
+          </a>
+        </div>
+        <div class="pb-m-top-right">
+          <a href="#"><span>SHOW MORE</span></a>
+        </div>
+      </div>
+
+      <div class="pb-promotion-bottom">
+        <ul>
+          <li class="pb-p-margin">
+            <!--pb promotion box-->
+            <div class="promotion-box">
+              <a href="#">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/1%EC%9B%94-%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98-%EC%8D%B8%EB%84%A4%EC%9D%BC_1000_1000-600x600.jpg"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <p>하나원큐페이 QR결제로 1만원 이상 결제 시 3천원 즉시혜택!</p>
+              </a>
+              <div class="p-small-font"><a href="#">READ MORE</a></div>
+            </div>
+          </li>
+          <li class="pb-p-margin gone-3">
+            <!--pb promotion box-->
+            <div class="promotion-box">
+              <a href="#">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2022/12/221215_%ED%8C%8C%EB%B0%94_%EC%A0%84%EA%B5%AD%EC%83%8C%EB%93%9C%EC%98%88%EC%95%BD_%EC%8D%B8%EB%84%A4%EC%9D%BC-600x600.png"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <p>여행 필수 기념품! 전국 샌드 예약💙</p>
+              </a>
+              <div class="p-small-font"><a href="#">READ MORE</a></div>
+            </div>
+          </li>
+          <li class="pb-p-margin gone-2">
+            <!--pb promotion box-->
+            <div class="promotion-box">
+              <a href="#">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/%E1%84%92%E1%85%A7%E1%86%AB%E1%84%83%E1%85%A2%E1%84%8F%E1%85%A1%E1%84%83%E1%85%B3-%E1%84%89%E1%85%A1%E1%86%BC%E1%84%89%E1%85%B5-%E1%84%92%E1%85%A8%E1%84%90%E1%85%A2%E1%86%A8-%E1%84%89%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF-600x600.jpeg"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <p>[현대M포인트/현대블루멤버스/기아멤버스] 상시 특별 혜택!</p>
+              </a>
+              <div class="p-small-font"><a href="#">READ MORE</a></div>
+            </div>
+          </li>
+          <li class="pb-p-gone-1">
+            <!--pb promotion box-->
+            <div class="promotion-box">
+              <a href="#">
+                <img
+                  src="https://cdn.paris.spl.li/wp-content/uploads/2021/09/%EC%8D%B8%EB%84%A4%EC%9D%BC%ED%98%84%EB%8C%80%EC%B9%B4%EB%93%9CM%ED%8F%AC%EC%9D%B8%ED%8A%B8A3out-12.26-01-600x600.jpg"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <p>현대카드로 매일 50% M포인트 사용!</p>
+              </a>
+              <div class="p-small-font"><a href="#">READ MORE</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--파리바게트 상품-->
+    <div class="pb-magazine">
+      <div class="pb-magazine-top">
+        <div class="pb-m-top-left">
+          <a href="#">
+            <h2>PRODUCTS</h2>
+          </a>
+        </div>
+        <div class="pb-m-top-right">
+          <a href="#"><span>SHOW MORE</span></a>
+        </div>
+      </div>
+
+      <div class="pb-product-bottom">
+        <ul>
+          <li></li>
+          <li>
+            <!--상품 박스-->
+            <div class="product-box">
+              <a href="#">
+                <div class="p-img-box">
+                  <img
+                    src="https://cdn.paris.spl.li/wp-content/uploads/2022/11/%ED%81%B4%EB%A1%9C%EB%B2%84%ED%96%89%EC%9A%B4%EB%B9%B5_2-600x600.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="product-name">행복이껑충! 클로버행운빵</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="product-box">
+              <a href="#">
+                <div class="p-img-box">
+                  <img
+                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EC%9A%B0%EB%A6%AC%EC%8C%80%EA%B2%AC%EA%B3%BC%ED%8C%8C%EC%9A%B4%EB%93%9C-600x600.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="product-name">우리쌀 견과파운드</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="product-box">
+              <a href="#">
+                <div class="p-img-box">
+                  <img
+                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EC%9A%B0%EB%A6%AC%EC%8C%80-%EC%9C%A0%EC%9E%90%EB%A1%A4%EC%BC%80%EC%9D%B5-600x600.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="product-name">우리쌀 유자롤케익</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="product-box">
+              <a href="#">
+                <div class="p-img-box">
+                  <img
+                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EC%9A%B0%EB%A6%AC%EC%8C%80%EB%AA%A8%EB%82%98%EC%B9%B4%EC%86%8C_2-600x600.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="product-name">바삭한 우리쌀 모나카(소)</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="product-l-li">
+            <div class="product-box">
+              <a href="#">
+                <div class="p-img-box">
+                  <img
+                    src="https://cdn.paris.spl.li/wp-content/uploads/2023/01/%EC%9A%B0%EB%A6%AC%EC%8C%80%EB%AA%A8%EB%82%98%EC%B9%B4%EB%8C%80_2-600x600.png"
+                    alt=""
+                  />
+                </div>
+                <div>
+                  <h3 class="product-name">바삭한 우리쌀 모나카(대)</h3>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <!--파리바게트 인스타-->
+    <div class="pb-insta">
+      <div class="pb-insta-text">
+        <a href="#">
+          <h2>@parisbaguette_kr</h2>
+        </a>
+        <span>Instagram</span>
+      </div>
+      <ul class="pb-insta-invisible">
+        <li>
+          <div class="insta-img-box">
+            <img src="./imgs/in_1.jpg" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="insta-img-box">
+            <img src="./imgs/in_2.jpg" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="insta-img-box">
+            <img src="./imgs/in_3.jpg" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="insta-img-box">
+            <img src="./imgs/in_4.jpg" alt="" />
+          </div>
+        </li>
+        <li>
+          <div class="insta-img-box">
+            <img src="./imgs/in_5.jpg" alt="" />
+          </div>
+        </li>
+        <li class="insta-l-li">
+          <div class="insta-img-box">
+            <img src="./imgs/in_6.jpg" alt="" />
+          </div>
+        </li>
+      </ul>
+
+      <!--파리바게트 인스타-visible-->
+      <div class="pb-insta-visible">
+        <ul>
+          <li>
+            <div class="insta-img-box">
+              <img src="./imgs/in_1.jpg" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="insta-img-box">
+              <img src="./imgs/in_2.jpg" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="insta-img-box">
+              <img src="./imgs/in_3.jpg" alt="" />
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="insta-img-box">
+              <img src="./imgs/in_4.jpg" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="insta-img-box">
+              <img src="./imgs/in_5.jpg" alt="" />
+            </div>
+          </li>
+          <li class="insta-l-li">
+            <div class="insta-img-box">
+              <img src="./imgs/in_6.jpg" alt="" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--글자 공지-->
+    <div class="pb-text-notice">
+      <div class="notice-align">
+        <ul>
+          <li class="li-e">
+            <a href="#">
+              <h3>고객센터</h3>
+              <h2>
+                고객의 소리를 적극 경청하고 고객만족 향상 활동을 지속적으로
+                실천합니다.
+              </h2>
+              <i class="arrow-1"></i>
+            </a>
+          </li>
+          <li class="notice-center"></li>
+          <li class="li-e">
+            <a href="#">
+              <h3>제휴 안내</h3>
+              <h2>다양한 온라인 제휴와 카드 정보를 확인하세요.</h2>
+              <i class="arrow-1"></i>
+            </a>
+          </li>
+          <li class="notice-center"></li>
+          <li class="dele-line li-e">
+            <a href="#">
+              <h3>공지사항</h3>
+              <h2>파리바게뜨 공지내용을 확인하세요.</h2>
+              <i class="arrow-1"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <ul>
+          <li class="f-c-1">
+            <h3>Info</h3>
+            <div class="info-box">
+              <ul>
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">창업안내</a></li>
+                <li><a href="#">안전보건경영방침</a></li>
+                <li><a href="#">거래희망사전등록</a></li>
+                <li><a href="#">윤리신고센터</a></li>
+                <li><a href="#">채용</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="f-c-2">
+            <h3>Contact Us</h3>
+            <div class="f-c-2-box">
+              <p><a href="#">고객센터</a></p>
+              <p><a href="#">080-731-2027</a></p>
+              <p>
+                <span>평일 09:00 - 17:00</span>
+                <span>(점심 12:00 - 13:00)</span>
+              </p>
+              <p><a href="#">고객칭찬</a></p>
+            </div>
+          </li>
+
+          <li class="f-c-3">
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/themes/paris/assets/img/footer/footer-logo-img-01.png"
+                alt=""
+                class="logo-1"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/uploads/footer-logo-img-06.png"
+                alt=""
+                class="footer-logos"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/themes/paris/assets/img/footer/footer-logo-img-02.png"
+                alt=""
+                class="footer-logos"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/themes/paris/assets/img/footer/footer-logo-img-03.png"
+                alt=""
+                class="footer-logos"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/themes/paris/assets/img/footer/footer-logo-img-04.png"
+                alt=""
+                class="footer-logos"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://www.paris.co.kr/wp-content/themes/paris/assets/img/footer/footer-logo-img-05.png"
+                alt=""
+                class="footer-logos"
+            /></a>
+          </li>
+
+          <li class="f-c-4">
+            <h3>Follow Us</h3>
+            <div>
+              <div class="sns-bar">
+                <a href="#">
+                  <span
+                    ><img
+                      src="https://www.paris.co.kr/wp-content/uploads/sns_ico_01.svg"
+                      class="sns-1"
+                      alt=""
+                  /></span>
+                </a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="https://www.paris.co.kr/wp-content/uploads/sns_ico_02.svg"
+                      class="sns-2"
+                      alt=""
+                  /></span>
+                </a>
+                <a href="#">
+                  <span
+                    ><img
+                      src="https://www.paris.co.kr/wp-content/uploads/sns_ico_03.svg"
+                      class="sns-3"
+                      alt=""
+                  /></span>
+                </a>
+              </div>
+
+              <div>
+                <div class="brandsite">Brand Site</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="footer-bottom">
+          <ul>
+            <li>
+              <a href="#"><span>이용약관</span></a>
+            </li>
+            <li>
+              <a href="#"><span class="red-font">개인정보처리방침</span></a>
+            </li>
+            <li>
+              <a href="#"><span>이메일무단수집거부</span></a>
+            </li>
+            <li class="no-after">
+              <a href="#"><span>영상정보처리기기운영관리방침</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copy">
+        <span
+          >All Rights Reserved © PARIS BAGUETTE, PARIS CROISSANT CO., LTD.</span
+        >
+        <span>경기도 성남시 중원구 사기막골로 31번길 18 (주)파리크리상 </span>
+      </div>
+    </footer>
+  </body>
+</html>
